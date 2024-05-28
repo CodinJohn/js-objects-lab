@@ -45,7 +45,7 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
-game.party[0] = pokemon[3]
+game.party.push(pokemon[3])
 
 console.log('Excercise 4',game.party)
 
@@ -58,9 +58,8 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
-game.party[1] = pokemon[146];
-game.party[2]= pokemon[128];
-game.party[3] = pokemon[142];
+game.party.push(pokemon[146], pokemon[128], pokemon[142])
+
 
 console.log('Excercise 5',game.party)
 
@@ -110,8 +109,10 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 8 here:
 */
 
-game.party[2] = pokemon[4];
-
+game.party.forEach((poke, i) => {
+  game.party.splice(i, 1, poke = pokemon[poke.number])
+  })
+  
 console.log('Exercise 8', game.party)
 
 /*
